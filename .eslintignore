@@ -1,0 +1,5 @@
+*.css
+*.svg
+*.scss
+tailwind.config.js
+config-overrides.js
