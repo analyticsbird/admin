@@ -6,6 +6,7 @@ import {
 import Loader from "components/Loader";
 import MainLayout from "components/MainLayout";
 import { CssBaseline } from "@mui/material";
+import NotFound from "views/NotFound";
 
 const Home = React.lazy(() => import("views/Home"));
 const Auth = React.lazy(() => import("views/Auth"));
@@ -19,7 +20,7 @@ const Routing: React.FC = () => (
           <Switch>
             <Route component={Home} exact path="/" />
             <Route component={Auth} path="/auth" />
-            <Route component={() => <div>404</div>} path="/404" />
+            <Route component={NotFound} path="/404" />
             <Route component={() => <Redirect to="/404" />} path="*" />
           </Switch>
         </React.Suspense>
