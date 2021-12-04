@@ -1,9 +1,3 @@
-import React from "react";
-
-const Home:React.FC = () => (
-  <>
-    hii
-  </>
-);
+import Home from "./container";
 
 export default Home;

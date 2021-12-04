@@ -3,15 +3,18 @@
 import { Button, TextField } from "@mui/material";
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import { getLogin } from "store/container/login/actions";
 import AuthWrapper from "../components/AuthWrapper";
 import TextContainer from "../components/Styled";
 
 const Login:React.FC = () => {
   const { control, handleSubmit } = useForm();
+  const dispatch = useDispatch();
   const history = useHistory();
   const onSubmit = (data:any) => {
-    console.log(data);
+    dispatch(getLogin(data));
   };
   return (
     <AuthWrapper

@@ -9,4 +9,9 @@ export const URLS = {
   LOGIN: `${BASE_URL}/auth/login`,
   REGISTER: `${BASE_URL}/auth/register`,
 
+  // app
+  USER_APP: `${BASE_URL}/app`,
+
 };
+
+export default URLS;

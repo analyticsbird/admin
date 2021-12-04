@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" width="200" height="200" viewBox="36 150 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.3" x="54" y="247.08" width="59.9118" height="59.9202" rx="11.4571" fill="#0E72ED"/>
+<rect x="131.029" y="247.08" width="59.9118" height="59.9202" rx="11.4571" fill="#0E72ED"/>
+<!-- <rect opacity="0.2" x="131.029" y="170.041" width="59.9118" height="59.9202" rx="11.4571" fill="#0E72ED"/> -->
+<rect x="54" y="170.041" width="59.9118" height="59.9202" rx="11.4571" fill="#0E72ED"/>
+<g opacity="0.5">
+<rect xmlns="http://www.w3.org/2000/svg" x="133.029" y="171.041" width="54.9118" height="54.9202" rx="8.59286" stroke="#0E72ED" stroke-width="3" stroke-dasharray="8.59 8.59"/>
+</g>
+</svg>
