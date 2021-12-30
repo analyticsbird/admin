@@ -11,6 +11,7 @@ import {
 import { Bar } from "react-chartjs-2";
 
 import { Paper, styled } from "@mui/material";
+import Typo from "components/Typo/Typo";
 
 ChartJS.register(
   CategoryScale,
@@ -82,6 +83,7 @@ const EmojiBarChart :React.FC = () => (
         border-gray-300`}
   >
     <div className="p-8">
+      <Typo text="Total Rating" type="subheading" />
       <Bar data={data} options={options as any} />
     </div>
   </PaperStyled>

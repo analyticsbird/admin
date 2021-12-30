@@ -5,6 +5,7 @@ import AssignmentIcon from "@mui/icons-material/Assignment";
 import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAlt";
 import CategoryCard from "components/CategoryCard";
 
+import Header from "./Header";
 import EmojiBarChart from "./EmojiBarChart";
 import EmojiList from "./EmojiList";
 import EmojiMultiLineChart from "./EmojiMultiLineChart";
@@ -12,6 +13,7 @@ import EmojiMultiLineChart from "./EmojiMultiLineChart";
 const AppHome:React.FC = () => (
   <>
     <CssBaseline />
+    <Header />
     <Grid container spacing={2}>
       <CategoryCard
         Icon={SentimentSatisfiedAltIcon}

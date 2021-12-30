@@ -13,6 +13,7 @@ import {
 } from "chart.js";
 
 import { Paper, styled } from "@mui/material";
+import Typo from "components/Typo";
 
 ChartJS.register(
   CategoryScale,
@@ -79,6 +80,7 @@ const EmojiMultiLineChart :React.FC = () => (
       border-gray-300`}
   >
     <div className="p-8">
+      <Typo text="Rating over time" type="subheading" />
       <Line data={data} />
     </div>
   </PaperStyled>
