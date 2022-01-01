@@ -12,6 +12,8 @@ export const URLS = {
   // app
   USER_APP: `${BASE_URL}/app`,
 
+  RATING_REPORT: `${BASE_URL}/rating/report`,
+
 };
 
 export default URLS;

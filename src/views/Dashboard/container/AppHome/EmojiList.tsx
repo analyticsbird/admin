@@ -5,8 +5,15 @@ import {
   Grid, Paper, Typography, styled,
 } from "@mui/material";
 
+import _ from "underscore";
+
 const PaperStyled = styled(Paper)(() => ({ boxShadow: "none" }));
-const EmojiList:React.FC = () => (
+
+interface PropTypes{
+  rating: Record<string, unknown>;
+}
+
+const EmojiList:React.FC<PropTypes> = ({ rating }) => (
   <Grid
     item
     lg={6}
@@ -28,31 +35,31 @@ const EmojiList:React.FC = () => (
         <div className="sm:w-52 sm:min-w-ful w-12 h-full text-center md:mt-0 mt-2 flex flex-col justify-center">
           <span className="text-5xl">😍</span>
           <Typography variant="h6" className="mt-auto text-24 font-semibold text-gray-500">
-            43
+            {_.get(rating, "1", 0) as number}
           </Typography>
         </div>
         <div className="sm:w-52 sm:min-w-ful w-12 h-full text-center md:mt-0 mt-2 flex flex-col justify-center">
           <span className="text-5xl">😃</span>
           <Typography variant="h6" className="mt-auto text-24 font-semibold text-gray-500">
-            32
+            {_.get(rating, "2", 0) as number}
           </Typography>
         </div>
         <div className="sm:w-52 sm:min-w-ful w-12 h-full text-center md:mt-0 mt-2 flex flex-col justify-center">
           <span className="text-5xl">😟</span>
           <Typography variant="h6" className="mt-auto text-24 font-semibold text-gray-500">
-            243
+            {_.get(rating, "3", 0) as number}
           </Typography>
         </div>
         <div className="sm:w-52 sm:min-w-ful w-12 h-full text-center md:mt-0 mt-2 flex flex-col justify-center">
           <span className="text-5xl">😢</span>
           <Typography variant="h6" className="mt-auto text-24 font-semibold text-gray-500">
-            10
+            {_.get(rating, "4", 0) as number}
           </Typography>
         </div>
         <div className="sm:w-52 sm:min-w-ful w-12 h-full text-center md:mt-0 mt-2 flex flex-col justify-center">
           <span className="text-5xl">😠</span>
           <Typography variant="h6" className="mt-auto text-24 font-semibold text-gray-500">
-            3
+            {_.get(rating, "5", 0) as number}
           </Typography>
         </div>
       </div>

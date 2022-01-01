@@ -7,12 +7,15 @@ import {
 interface PropTypes{
     Icon: any;
     title: string;
+    value: string | number;
     // eslint-disable-next-line react/require-default-props
     iconBg?: string;
 }
 
 const PaperStyled = styled(Paper)(() => ({ boxShadow: "none" }));
-const CategoryCard:React.FC<PropTypes> = ({ Icon, iconBg, title }) => (
+const CategoryCard:React.FC<PropTypes> = ({
+  Icon, iconBg, title, value,
+}) => (
   <Grid
     item
     lg={3}
@@ -43,7 +46,7 @@ const CategoryCard:React.FC<PropTypes> = ({ Icon, iconBg, title }) => (
           </Avatar>
           <div className="ml-10">
             <div className="mt-auto text-5xl font-semibold text-gray-500 mb-2">
-              43
+              {value}
             </div>
             <Typography variant="subtitle2" className="text-gray-500">
               {title}
