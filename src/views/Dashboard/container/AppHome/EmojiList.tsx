@@ -35,13 +35,13 @@ const EmojiList:React.FC<PropTypes> = ({ rating }) => (
         <div className="sm:w-52 sm:min-w-ful w-12 h-full text-center md:mt-0 mt-2 flex flex-col justify-center">
           <span className="text-5xl">😍</span>
           <Typography variant="h6" className="mt-auto text-24 font-semibold text-gray-500">
-            {_.get(rating, "1", 0) as number}
+            {_.get(rating, "5", 0) as number}
           </Typography>
         </div>
         <div className="sm:w-52 sm:min-w-ful w-12 h-full text-center md:mt-0 mt-2 flex flex-col justify-center">
           <span className="text-5xl">😃</span>
           <Typography variant="h6" className="mt-auto text-24 font-semibold text-gray-500">
-            {_.get(rating, "2", 0) as number}
+            {_.get(rating, "4", 0) as number}
           </Typography>
         </div>
         <div className="sm:w-52 sm:min-w-ful w-12 h-full text-center md:mt-0 mt-2 flex flex-col justify-center">
@@ -53,13 +53,13 @@ const EmojiList:React.FC<PropTypes> = ({ rating }) => (
         <div className="sm:w-52 sm:min-w-ful w-12 h-full text-center md:mt-0 mt-2 flex flex-col justify-center">
           <span className="text-5xl">😢</span>
           <Typography variant="h6" className="mt-auto text-24 font-semibold text-gray-500">
-            {_.get(rating, "4", 0) as number}
+            {_.get(rating, "2", 0) as number}
           </Typography>
         </div>
         <div className="sm:w-52 sm:min-w-ful w-12 h-full text-center md:mt-0 mt-2 flex flex-col justify-center">
           <span className="text-5xl">😠</span>
           <Typography variant="h6" className="mt-auto text-24 font-semibold text-gray-500">
-            {_.get(rating, "5", 0) as number}
+            {_.get(rating, "1", 0) as number}
           </Typography>
         </div>
       </div>

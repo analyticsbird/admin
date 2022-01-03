@@ -11,7 +11,7 @@ import _ from "underscore";
 import Header from "./Header";
 import EmojiBarChart from "./EmojiBarChart";
 import EmojiList from "./EmojiList";
-import EmojiMultiLineChart from "./EmojiMultiLineChart";
+import RatingOverTime from "./RatingOverTime";
 
 const AppHome:React.FC = () => {
   const [state, setState] = useState({
@@ -70,7 +70,7 @@ const AppHome:React.FC = () => {
           xl={6}
           xs={12}
         >
-          <EmojiMultiLineChart />
+          <RatingOverTime />
         </Grid>
       </Grid>
     </>
