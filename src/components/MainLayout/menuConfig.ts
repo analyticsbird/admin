@@ -1,45 +1,33 @@
 import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
-import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
-import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
-import CardGiftcardOutlinedIcon from "@mui/icons-material/CardGiftcardOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import AccountTreeOutlinedIcon from "@mui/icons-material/AccountTreeOutlined";
 
 type MenuConfig = {
     name: string;
     Icon: any;
-    selected?: boolean
+    path: string
 }
 const menuConfig: MenuConfig[] = [
   {
     name: "Home",
     Icon: HomeOutlinedIcon,
-    selected: true,
+    path: "app",
   },
   {
-    name: "Orders",
+    name: "Feedback",
     Icon: DescriptionOutlinedIcon,
+    path: "feedback",
   },
   {
-    name: "Products",
-    Icon: ShoppingCartOutlinedIcon,
-  },
-  {
-    name: "Customers",
-    Icon: PeopleAltOutlinedIcon,
-  },
-  {
-    name: "Discounts",
-    Icon: LocalOfferOutlinedIcon,
-  },
-  {
-    name: "Gift cards",
-    Icon: CardGiftcardOutlinedIcon,
-  },
-  {
-    name: "Settings",
+    name: "Customization",
     Icon: SettingsOutlinedIcon,
+    path: "customization",
+  },
+  {
+    name: "Integrations",
+    Icon: AccountTreeOutlinedIcon,
+    path: "integration",
   },
 ];
 

@@ -4,7 +4,6 @@ import {
 } from "react-router-dom";
 
 import Loader from "components/Loader";
-import MainLayout from "components/MainLayout";
 import { CssBaseline } from "@mui/material";
 import NotFound from "views/NotFound";
 import PrivateRoute from "components/PrivateRoute";
@@ -16,18 +15,16 @@ const DashboardRouting = React.lazy(() => import("views/Dashboard"));
 const Routing: React.FC = () => (
   <>
     <Router>
-      <MainLayout>
-        <CssBaseline />
-        <React.Suspense fallback={<Loader />}>
-          <Switch>
-            <PrivateRoute component={Home} exact path="/" />
-            <PrivateRoute component={DashboardRouting} path="/dashboard/:appId" />
-            <Route component={Auth} path="/auth" />
-            <Route component={NotFound} path="/404" />
-            <Route component={() => <Redirect to="/404" />} path="*" />
-          </Switch>
-        </React.Suspense>
-      </MainLayout>
+      <CssBaseline />
+      <React.Suspense fallback={<Loader />}>
+        <Switch>
+          <PrivateRoute component={Home} exact path="/" />
+          <PrivateRoute component={DashboardRouting} path="/dashboard/:appId" />
+          <Route component={Auth} path="/auth" />
+          <Route component={NotFound} path="/404" />
+          <Route component={() => <Redirect to="/404" />} path="*" />
+        </Switch>
+      </React.Suspense>
     </Router>
   </>
 );

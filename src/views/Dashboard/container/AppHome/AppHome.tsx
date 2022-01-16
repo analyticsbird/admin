@@ -8,6 +8,7 @@ import CategoryCard from "components/CategoryCard";
 import { ratingReport } from "views/Dashboard/service/requests";
 import { useParams } from "react-router-dom";
 import _ from "underscore";
+import dayjs from "dayjs";
 import Header from "./Header";
 import EmojiBarChart from "./EmojiBarChart";
 import EmojiList from "./EmojiList";
@@ -33,8 +34,41 @@ const AppHome:React.FC = () => {
   const { report } = state;
 
   const rating: any = _.get(report, "ratings", {});
-  const ratingGraph = _.values(rating);
-  console.log(ratingGraph);
+  const ratingByDateArr:any = _.get(report, "ratingsByDate", []);
+
+  const ratingByDate:any = {};
+
+  ratingByDateArr.forEach((element:any) => {
+    const date = element[2];
+    const category = element[0];
+    const rating1 = element[1];
+
+    if (ratingByDate[date]) {
+      ratingByDate[date] = { ...ratingByDate[date], [category]: rating1 };
+    } else {
+      ratingByDate[date] = { [category]: rating1 };
+    }
+  });
+
+  let ratingByDateReduce:any[] = [];
+
+  _.each(ratingByDate, (val, key) => {
+    const rateArr = [
+      dayjs(key).format("ll"),
+      val[1] || 0,
+      val[2] || 0,
+      val[3] || 0,
+      val[4] || 0,
+      val[5] || 0];
+    ratingByDateReduce = [...ratingByDateReduce, rateArr];
+  });
+
+  ratingByDateReduce.sort((a, b) => {
+    const dateA:any = new Date(a[0]);
+    const dateB:any = new Date(b[0]);
+    return dateA - dateB;
+  });
+
   return (
     <>
       <CssBaseline />
@@ -70,7 +104,7 @@ const AppHome:React.FC = () => {
           xl={6}
           xs={12}
         >
-          <RatingOverTime />
+          <RatingOverTime ratingByDate={ratingByDateReduce} />
         </Grid>
       </Grid>
     </>

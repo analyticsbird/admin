@@ -5,6 +5,7 @@ import {
 } from "@mui/material";
 import PowerSettingsNewOutlinedIcon from "@mui/icons-material/PowerSettingsNewOutlined";
 
+import { useLocation, useParams, useRouteMatch } from "react-router-dom";
 import menuConfig from "./menuConfig";
 import MenuList from "./MenuList";
 import {
@@ -12,8 +13,15 @@ import {
 } from "./Styled";
 
 const LayoutDrawer:React.FC = () => {
-  // const theme = useTheme();
   const drawerWidth = 67;
+
+  const { pathname } = useLocation();
+  const subPath = pathname.split("/")?.[3] || "";
+
+  const { appId } = useParams<{appId: string}>();
+  const { path } = useRouteMatch();
+
+  const urlPath = path.replace(":appId", appId);
   return (
     <Drawer
       sx={{
@@ -47,7 +55,8 @@ const LayoutDrawer:React.FC = () => {
                   Icon={val.Icon}
                   key={val.name}
                   name={val.name}
-                  selected={val.selected}
+                  selected={subPath === val.path}
+                  path={`${urlPath}/${val.path}`}
                 />
               ))
             }

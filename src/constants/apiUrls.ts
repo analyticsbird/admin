@@ -14,6 +14,8 @@ export const URLS = {
 
   RATING_REPORT: `${BASE_URL}/rating/report`,
 
+  FEEDBACK: `${BASE_URL}/rating/feedback`,
+
 };
 
 export default URLS;
