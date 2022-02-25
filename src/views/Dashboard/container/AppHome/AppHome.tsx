@@ -12,7 +12,7 @@ import dayjs from "dayjs";
 import Header from "./Header";
 import EmojiBarChart from "./EmojiBarChart";
 import EmojiList from "./EmojiList";
-import RatingOverTime from "./RatingOverTime";
+import Rechart from "./Rechart";
 
 const AppHome:React.FC = () => {
   const [state, setState] = useState({
@@ -104,7 +104,8 @@ const AppHome:React.FC = () => {
           xl={6}
           xs={12}
         >
-          <RatingOverTime ratingByDate={ratingByDateReduce} />
+          {/* <RatingOverTime ratingByDate={ratingByDateReduce} /> */}
+          <Rechart ratingByDate={ratingByDateReduce} />
         </Grid>
       </Grid>
     </>

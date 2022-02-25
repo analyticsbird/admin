@@ -6,6 +6,7 @@ import {
 import Loader from "components/Loader";
 import NotFound from "views/NotFound";
 import MainLayout from "components/MainLayout";
+import Customization from "./container/Customization";
 
 const DashboardHome = React.lazy(() => import("views/Dashboard/container/AppHome"));
 const Feedback = React.lazy(() => import("./container/Feedback"));
@@ -18,6 +19,7 @@ const DashboardRouting: React.FC = () => {
         <Switch>
           <Route component={DashboardHome} exact path={`${path}/app`} />
           <Route component={Feedback} exact path={`${path}/feedback`} />
+          <Route component={Customization} exact path={`${path}/customization`} />
           <Route component={NotFound} path="/404" />
           <Route component={() => <Redirect to="/404" />} path="*" />
         </Switch>
