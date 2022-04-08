@@ -27,7 +27,7 @@ const menuConfig: MenuConfig[] = [
   {
     name: "Integrations",
     Icon: AccountTreeOutlinedIcon,
-    path: "integration",
+    path: "integrations",
   },
 ];
 

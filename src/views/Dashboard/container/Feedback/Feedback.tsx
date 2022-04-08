@@ -37,18 +37,20 @@ const Feedback:React.FC = () => {
           item
           xs={12}
         >
-          <PaperStyled
-            className={`
-        flex-grow
-        h-full
-        sm:mt-8 mt-5
-        rounded-6 shadow-0 border border 
-        border-solid
-        border-gray-300`}
-          >
-            <FeedbackTable tableData={feedback} />
+          <div className="mb-8">
+            <PaperStyled
+              className={`
+              flex-grow
+              h-full
+              sm:mt-8 mt-5
+              rounded-6 shadow-0 border border 
+              border-solid
+              border-gray-300`}
+            >
+              <FeedbackTable tableData={feedback} />
 
-          </PaperStyled>
+            </PaperStyled>
+          </div>
         </Grid>
       </Grid>
     </>

@@ -16,6 +16,7 @@ const App:React.FC = () => (
       <Routing />
     </ThemeWrapper>
   </Provider>
+
 );
 
 export default App;
