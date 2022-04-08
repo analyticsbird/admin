@@ -18,7 +18,7 @@ const DatePicker:React.FC = () => {
           onChange={(newValue:any) => {
             setValue(newValue);
           }}
-          renderInput={(params) => (
+          renderInput={(params:any) => (
             <TextField {...params} />
           )}
         />

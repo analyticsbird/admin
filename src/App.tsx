@@ -11,11 +11,13 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 const App:React.FC = () => (
-  <Provider store={store}>
-    <ThemeWrapper>
-      <Routing />
-    </ThemeWrapper>
-  </Provider>
+  <>
+    <Provider store={store}>
+      <ThemeWrapper>
+        <Routing />
+      </ThemeWrapper>
+    </Provider>
+  </>
 
 );
 
