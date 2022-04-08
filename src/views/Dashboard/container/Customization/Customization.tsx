@@ -3,7 +3,6 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import styled from "@mui/system/styled";
 import React from "react";
-import { SketchPicker } from "react-color";
 import Header from "./Header";
 import PositionSelect from "./PositionSelect";
 
@@ -29,9 +28,7 @@ const Customization:React.FC = () => {
               border-gray-300`}
             >
               <div className="p-8">
-
                 <PositionSelect />
-                <SketchPicker />
               </div>
 
             </PaperStyled>
